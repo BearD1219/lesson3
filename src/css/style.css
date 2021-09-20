@@ -41,6 +41,12 @@ body {
   margin: 0 auto;
 }
 
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .link {
   text-decoration: none;
 }
@@ -263,6 +269,67 @@ body {
             transform: scale(1);
   }
 }
+.benefits {
+  padding-top: 70px;
+  padding-bottom: 64px;
+}
+.benefits_bg {
+  background-color: #F6F6F6;
+}
+.benefits__title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.benefits__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  margin: 0 -33px;
+}
+.benefits__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 33.333%;
+          flex: 1 1 33.333%;
+  text-align: center;
+  padding: 0 33px;
+}
+.benefits__header {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  padding-top: 100px;
+}
+.benefits__header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
+}
+.benefits__header:nth-child(1)::before {
+  background: url("../img/icons_png/cup.png") center center no-repeat;
+}
+.benefits__header:nth-child(2)::before {
+  background: url("../img/icons_png/heartbeat.png") center center no-repeat;
+}
+.benefits__header:nth-child(3)::before {
+  background: url("../img/icons_png/shoe.png") center center no-repeat;
+}
+.benefits__text-link {
+  font-family: MuseoModerno, cursive;
+  text-transform: uppercase;
+  color: #f00;
+}
+
 @media (max-width: 991px) {
   .container {
     padding-left: 10px;

@@ -1,0 +1,59 @@
+.benefits {
+    padding-top: 70px;
+    padding-bottom: 64px;
+    &_bg {
+        background-color: #F6F6F6;
+    }
+    &__title {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        margin: 0 -33px;
+    }
+    &__item {
+        flex: 1 1 33.333%;
+        text-align: center;
+        padding: 0 33px;
+    }
+    &__header {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        position: relative;
+        padding-top: 100px;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 70px;
+        }
+        &:nth-child(1) {
+            &::before {
+                background: url("../img/icons_png/cup.png")center center no-repeat;
+            }
+        }
+        &:nth-child(2) {
+            &::before {
+                background: url("../img/icons_png/heartbeat.png")center center no-repeat;
+            }
+        }
+        &:nth-child(3) {
+            &::before {
+                background: url("../img/icons_png/shoe.png")center center no-repeat;
+            }
+        }
+    }
+    &__text-link {
+        font-family: MuseoModerno, cursive;
+        text-transform: uppercase;
+        color: #f00;
+    }
+}
