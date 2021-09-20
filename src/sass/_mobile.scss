@@ -1,0 +1,29 @@
+.mobile {
+    display: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: $highlight-color;
+    cursor: pointer;
+    border: none;
+    &:hover &__icon {
+        animation-name: mobile-pulse;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    &__icon {
+        width: 25px;
+        height: 25px;
+        margin: auto;
+        fill: #fff;
+    }
+}
+
+@keyframes mobile-pulse {
+    0% {transform: scale(1)}
+    25% {transform: scale(1.2)}
+    50% {transform: scale(1)}
+    75% {transform: scale(.8)}
+    100% {transform: scale(1)}
+}

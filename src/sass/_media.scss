@@ -1,0 +1,92 @@
+@media (max-width: 991px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .promo {
+        &_bg {
+            background-position: left;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        &__official {
+            display: none;
+        }
+    }
+
+    .promo {
+        &__title {
+            font-size: 35px
+        }
+        &__subtitle {
+            font-size: 21px;
+        }
+        &__icons {
+            max-width: 352px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .header {
+        &__logo {
+            flex-basis: 200px;
+        }
+        &__contact {
+            display: none;
+        }
+    }
+
+    .mobile {
+        display: flex;
+    }
+
+    .promo {
+        padding-bottom: 50px;
+        &_bg {
+            min-height:0;
+            background-position: 10%;
+        }
+        &__content {
+            margin-top: 60px;
+            text-align: center;
+        }
+        &__title {
+            font-size: 30px;
+            margin-bottom: 17px;
+        }
+        &__subtitle {
+            font-size: 16px;
+            margin-bottom: 36px;
+        }
+        &__icons {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 47px;
+        }
+        &__icon {
+            padding-top: 50px;
+            font-size: 12px;
+            &::before {
+                width: 30px;
+            }
+            &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+                &::before {
+                    background-size: contain;
+                }
+            }
+        }
+        &__button {
+            font-size: 14px;
+            padding: 14px 31px;
+            margin-bottom: 13px;
+        }
+        &__link-wrap {
+            font-size: 13px;
+        }
+    }
+}

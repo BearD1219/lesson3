@@ -13,10 +13,11 @@
     &__title {
         font-weight: 700;
         font-size: 42px;
+        text-transform: uppercase;
         margin-bottom: 17px;
     }
     &__subtitle {
-        font-weight: 500;
+        font-weight: 300;
         font-size: 24px;
         margin-bottom: 60px;
     }
@@ -32,26 +33,28 @@
         position: relative;
         padding-top: 66px;
         &::before {
+            content: '';
+            display: block;
             position: absolute;
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 42px;
-            height: 26px;
+            width: 48px;
+            height: 52px;
         }
         &:nth-child(1) {
             &::before {
-                content: url("../img/icons_png/clock.png");
+                background: url("../img/icons_png/clock.png")center center no-repeat;
             }
         }
         &:nth-child(2) {
             &::before {
-                content: url("../img/icons_png/cart.png");
+                background: url("../img/icons_png/cart.png")center center no-repeat;
             }
         }
         &:nth-child(3) {
             &::before {
-                content: url("../img/icons_png/messages.png");
+                background: url("../img/icons_png/messages.png")center center no-repeat;
             }
         }
     }
@@ -60,7 +63,7 @@
     }
     &__link-wrap {
         font-size: 16px;
-        font-weight: 500;
+        // font-weight: 500;
     }
     &__link {
         text-transform: uppercase;

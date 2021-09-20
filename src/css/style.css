@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  src: local("MuseoSansCyrl-300"), url(../fonts/MuseoSansCyrl-300.woff), url(../fonts/MuseoSansCyrl-300.ttf), url(../fonts/MuseoSansCyrl-300.eot);
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  src: local("MuseoSansCyrl-500"), url(../fonts/MuseoSansCyrl-500.woff), url(../fonts/MuseoSansCyrl-500.ttf), url(../fonts/MuseoSansCyrl-500.eot);
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  src: local("MuseoSansCyrl-700"), url(../fonts/MuseoSansCyrl-700.woff), url(../fonts/MuseoSansCyrl-700.ttf), url(../fonts/MuseoSansCyrl-700.eot);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MuseoModerno";
+  src: local("MuseoModerno-Medium"), url(../fonts/MuseoModerno-Medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +30,7 @@
 }
 
 body {
-  font-family: "Museo Moderno", cursive;
+  font-family: "Museo Sans Cyrl", sans-serif;
   font-weight: 300;
   font-size: 14px;
   color: #0D0D0D;
@@ -32,7 +56,7 @@ body {
 }
 
 .button {
-  font-weight: 500;
+  font-weight: 300;
   font-size: 12px;
   color: #fff;
   background: #C70101;
@@ -63,10 +87,11 @@ body {
 .promo__title {
   font-weight: 700;
   font-size: 42px;
+  text-transform: uppercase;
   margin-bottom: 17px;
 }
 .promo__subtitle {
-  font-weight: 500;
+  font-weight: 300;
   font-size: 24px;
   margin-bottom: 60px;
 }
@@ -87,29 +112,30 @@ body {
   padding-top: 66px;
 }
 .promo__icon::before {
+  content: "";
+  display: block;
   position: absolute;
   top: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 42px;
-  height: 26px;
+  width: 48px;
+  height: 52px;
 }
 .promo__icon:nth-child(1)::before {
-  content: url("../img/icons_png/clock.png");
+  background: url("../img/icons_png/clock.png") center center no-repeat;
 }
 .promo__icon:nth-child(2)::before {
-  content: url("../img/icons_png/cart.png");
+  background: url("../img/icons_png/cart.png") center center no-repeat;
 }
 .promo__icon:nth-child(3)::before {
-  content: url("../img/icons_png/messages.png");
+  background: url("../img/icons_png/messages.png") center center no-repeat;
 }
 .promo__button {
   margin-bottom: 13px;
 }
 .promo__link-wrap {
   font-size: 16px;
-  font-weight: 500;
 }
 .promo__link {
   text-transform: uppercase;
@@ -147,6 +173,7 @@ body {
   margin-bottom: 7px;
 }
 .header__official-subtitle {
+  font-family: MuseoModerno;
   font-size: 18px;
 }
 .header__contact {
@@ -163,4 +190,159 @@ body {
 }
 .header__telephone {
   margin-bottom: 8px;
+}
+
+.mobile {
+  display: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #C70101;
+  cursor: pointer;
+  border: none;
+}
+.mobile:hover .mobile__icon {
+  -webkit-animation-name: mobile-pulse;
+          animation-name: mobile-pulse;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.mobile__icon {
+  width: 25px;
+  height: 25px;
+  margin: auto;
+  fill: #fff;
+}
+
+@-webkit-keyframes mobile-pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  75% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes mobile-pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  75% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@media (max-width: 991px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .promo_bg {
+    background-position: left;
+  }
+}
+@media (max-width: 767px) {
+  .header__official {
+    display: none;
+  }
+
+  .promo__title {
+    font-size: 35px;
+  }
+  .promo__subtitle {
+    font-size: 21px;
+  }
+  .promo__icons {
+    max-width: 352px;
+  }
+}
+@media (max-width: 575px) {
+  .header__logo {
+    -ms-flex-preferred-size: 200px;
+        flex-basis: 200px;
+  }
+  .header__contact {
+    display: none;
+  }
+
+  .mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .promo {
+    padding-bottom: 50px;
+  }
+  .promo_bg {
+    min-height: 0;
+    background-position: 10%;
+  }
+  .promo__content {
+    margin-top: 60px;
+    text-align: center;
+  }
+  .promo__title {
+    font-size: 30px;
+    margin-bottom: 17px;
+  }
+  .promo__subtitle {
+    font-size: 16px;
+    margin-bottom: 36px;
+  }
+  .promo__icons {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 47px;
+  }
+  .promo__icon {
+    padding-top: 50px;
+    font-size: 12px;
+  }
+  .promo__icon::before {
+    width: 30px;
+  }
+  .promo__icon:nth-child(1)::before, .promo__icon:nth-child(2)::before, .promo__icon:nth-child(3)::before {
+    background-size: contain;
+  }
+  .promo__button {
+    font-size: 14px;
+    padding: 14px 31px;
+    margin-bottom: 13px;
+  }
+  .promo__link-wrap {
+    font-size: 13px;
+  }
 }
