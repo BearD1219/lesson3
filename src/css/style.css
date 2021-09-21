@@ -128,13 +128,13 @@ body {
   width: 48px;
   height: 52px;
 }
-.promo__icon:nth-child(1)::before {
+.promo__icon_1::before {
   background: url("../img/icons_png/clock.png") center center no-repeat;
 }
-.promo__icon:nth-child(2)::before {
+.promo__icon_2::before {
   background: url("../img/icons_png/cart.png") center center no-repeat;
 }
-.promo__icon:nth-child(3)::before {
+.promo__icon_3::before {
   background: url("../img/icons_png/messages.png") center center no-repeat;
 }
 .promo__button {
@@ -425,8 +425,6 @@ body {
   }
   .promo__icon::before {
     width: 30px;
-  }
-  .promo__icon:nth-child(1)::before, .promo__icon:nth-child(2)::before, .promo__icon:nth-child(3)::before {
     background-size: contain;
   }
   .promo__button {
