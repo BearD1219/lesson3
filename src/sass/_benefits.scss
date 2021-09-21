@@ -12,12 +12,14 @@
         display: flex;
         justify-content: space-between;
         text-align: center;
-        margin: 0 -33px;
     }
     &__item {
         flex: 1 1 33.333%;
         text-align: center;
-        padding: 0 33px;
+        margin-right: 66px;
+        &:last-child {
+            margin-right: initial;
+        }
     }
     &__header {
         font-size: 18px;
@@ -35,17 +37,17 @@
             width: 70px;
             height: 70px;
         }
-        &:nth-child(1) {
+        &_1 {
             &::before {
                 background: url("../img/icons_png/cup.png")center center no-repeat;
             }
         }
-        &:nth-child(2) {
+        &_2 {
             &::before {
                 background: url("../img/icons_png/heartbeat.png")center center no-repeat;
             }
         }
-        &:nth-child(3) {
+        &_3 {
             &::before {
                 background: url("../img/icons_png/shoe.png")center center no-repeat;
             }
