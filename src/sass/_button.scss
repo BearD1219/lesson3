@@ -1,0 +1,19 @@
+.button {
+    font-weight: 300;
+    font-size: 12px;
+    color: #fff;
+    background: $highlight-color;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    &_big {
+        font-size: 16px;
+        padding: 18px 43px;
+    }
+    &_form {
+        font-size: 16px;
+        padding: 17px 20px;
+    }
+}
