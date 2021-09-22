@@ -9,6 +9,21 @@
             background-position: left;
         }
     }
+
+    .swiper {
+        max-width: 80%;
+        &-slide {
+            img {
+                width: 100%;
+            }
+        }
+        &-button {
+            display: none;
+        }
+        &-pagination {
+            display: block;
+        }
+    }
 }
 
 @media (max-width: 767px) {
@@ -156,6 +171,16 @@
         }
         &__form {
             margin: 0 auto;
+        }
+    }
+
+    .corousel {
+        padding: 50px 0;
+    }
+    .swiper {
+        &-pagination-bullet {
+            width: 7px;
+            height: 7px;
         }
     }
 }

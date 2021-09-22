@@ -1,0 +1,31 @@
+.corousel {
+    padding: 81px 0;
+}
+
+.swiper {
+    padding-bottom: 5px;
+    &-slide {
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    &-button {
+        &:after {
+            content: none;
+        }
+    }
+    &-button-prev {
+        background: url("../img/icons_png/arrow-left.png") center/cover no-repeat;
+    }
+    &-button-next {
+        background: url("../img/icons_png/arrow-right.png") center/cover no-repeat;
+    }
+    &-pagination {
+        display: none;
+        bottom: 0 !important
+    }
+    &-pagination-bullet-active {
+        background-color: $highlight-color;
+    }
+}

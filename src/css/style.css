@@ -379,6 +379,34 @@ body {
   margin-bottom: 17px;
 }
 
+.corousel {
+  padding: 81px 0;
+}
+
+.swiper {
+  padding-bottom: 5px;
+}
+.swiper-slide img {
+  display: block;
+  margin: 0 auto;
+}
+.swiper-button:after {
+  content: none;
+}
+.swiper-button-prev {
+  background: url("../img/icons_png/arrow-left.png") center/cover no-repeat;
+}
+.swiper-button-next {
+  background: url("../img/icons_png/arrow-right.png") center/cover no-repeat;
+}
+.swiper-pagination {
+  display: none;
+  bottom: 0 !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: #C70101;
+}
+
 @media (max-width: 991px) {
   .container {
     padding-left: 10px;
@@ -387,6 +415,19 @@ body {
 
   .promo_bg {
     background-position: left;
+  }
+
+  .swiper {
+    max-width: 80%;
+  }
+  .swiper-slide img {
+    width: 100%;
+  }
+  .swiper-button {
+    display: none;
+  }
+  .swiper-pagination {
+    display: block;
   }
 }
 @media (max-width: 767px) {
@@ -527,5 +568,14 @@ body {
   }
   .consultation__form {
     margin: 0 auto;
+  }
+
+  .corousel {
+    padding: 50px 0;
+  }
+
+  .swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
   }
 }
