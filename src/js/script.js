@@ -1,7 +1,7 @@
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     loop: true,
-  
+    grabCursor: true,
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
