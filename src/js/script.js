@@ -13,3 +13,18 @@ const swiper = new Swiper('.swiper', {
         type: 'bullets',
       },
 });
+
+const tabs = document.querySelectorAll('.catalog__tab');
+for (let tab of tabs) {
+  tab.addEventListener('click', function(e) {
+    console.log(index);
+    if (tab.classList.contains('catalog__tab_active')) {
+      return;
+    } else {
+      for(let tab of tabs) {
+        tab.classList.remove('catalog__tab_active');
+      }
+      this.classList.add('catalog__tab_active');
+    };
+  });
+}

@@ -38,11 +38,20 @@
             border: none;
         }
     }
+    &__wrap {
+        display: none;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &_active {
+            display: flex;
+        }
+    }
     &__item {
         border: 2px solid #E8E8E8;
         width: 303px;
         min-height: 422px;
         padding: 20px;
+        margin-bottom: 20px;
         overflow: hidden;
         hr {
             border-bottom: none;

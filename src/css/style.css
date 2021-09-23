@@ -454,11 +454,25 @@ body {
   color: #fff;
   border: none;
 }
+.catalog__wrap {
+  display: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.catalog__wrap_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .catalog__item {
   border: 2px solid #E8E8E8;
   width: 303px;
   min-height: 422px;
   padding: 20px;
+  margin-bottom: 20px;
   overflow: hidden;
 }
 .catalog__item hr {
