@@ -14,17 +14,24 @@ const swiper = new Swiper('.swiper', {
       },
 });
 
-const tabs = document.querySelectorAll('.catalog__tab');
-for (let tab of tabs) {
-  tab.addEventListener('click', function(e) {
-    console.log(index);
-    if (tab.classList.contains('catalog__tab_active')) {
-      return;
-    } else {
-      for(let tab of tabs) {
-        tab.classList.remove('catalog__tab_active');
-      }
-      this.classList.add('catalog__tab_active');
-    };
+// TABS
+$(function() {    
+  $('.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
+    $(this).addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active');
+    $(this).closest('.container').find('.catalog__wrap').removeClass('catalog__wrap_active').eq($(this).index()).addClass('catalog__wrap_active');
+  });
+});
+
+// CARDS
+function toggleSlide (item) {
+  $(item).each(function(i) {
+    $(this).on('click', function(e) {
+      e.preventDefault();
+      $('.catalog__item-content').eq(i).toggleClass('catalog__item-content_active');
+      $('.catalog__item-descr').eq(i).toggleClass('catalog__item-descr_active');
+    });
   });
 }
+
+toggleSlide('.catalog__link');
+toggleSlide('.catalog__link-back');

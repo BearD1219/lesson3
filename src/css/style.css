@@ -411,9 +411,7 @@ body {
   padding-bottom: 80px;
 }
 .catalog__title {
-  font-size: 30px;
   font-weight: 400;
-  text-transform: uppercase;
   color: #0D0D0D;
   text-align: center;
   margin-bottom: 46px;
@@ -567,6 +565,13 @@ body {
   display: block;
   text-align: center;
 }
+.catalog__link-back {
+  color: #C70101;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: block;
+  text-align: center;
+}
 .catalog__sale {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -614,6 +619,19 @@ body {
   .swiper-pagination {
     display: block;
   }
+
+  .catalog__wrap {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .catalog__item {
+    max-width: 50%;
+    margin-right: 25px;
+  }
+  .catalog__item:nth-of-type(2n) {
+    margin-right: 0;
+  }
 }
 @media (max-width: 767px) {
   .title {
@@ -647,6 +665,51 @@ body {
   }
   .benefits__header {
     font-size: 17px;
+  }
+
+  .catalog__tab {
+    width: 146px;
+    height: 38px;
+    font-size: 14px;
+    line-height: 37px;
+  }
+  .catalog__item {
+    padding: 9px;
+    max-width: 243px;
+    min-height: 0;
+  }
+  .catalog__item-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .catalog__img {
+    width: 100px;
+    height: auto;
+  }
+  .catalog__name {
+    font-size: 15px;
+  }
+  .catalog__link {
+    margin-top: auto;
+    font-size: 13px;
+  }
+  .catalog__link-back {
+    font-size: 13px;
+  }
+  .catalog__price-old {
+    font-size: 13px;
+  }
+  .catalog__price-current {
+    font-size: 17px;
+  }
+  .catalog__button {
+    font-size: 12px;
+    padding: 10px 22px;
   }
 }
 @media (max-width: 575px) {
@@ -762,5 +825,34 @@ body {
   .swiper-pagination-bullet {
     width: 7px;
     height: 7px;
+  }
+
+  .catalog {
+    padding-bottom: 20px;
+  }
+  .catalog__tabs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 30px;
+  }
+  .catalog__tab {
+    width: 60%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .catalog__wrap_active {
+    display: block;
+  }
+  .catalog__item {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .catalog__item:nth-of-type(2n) {
+    margin-right: auto;
   }
 }
