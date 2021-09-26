@@ -48,6 +48,13 @@
             margin-right: 40px;
         }
     }
+
+    .footer {
+        &__info {
+            width: 445px;
+            height: 245px;
+        }
+    }
 }
 
 @media (max-width: 767px) {
@@ -143,6 +150,29 @@
             &-text {
                 font-size: 15px;
             }
+        }
+    }
+
+    .footer {
+        &__info {
+            width: 384px;
+            height: 166px;
+            padding: 17px;
+        }
+        &__address {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        &__tel {
+            font-size: 18px;
+            margin-bottom: 18px;
+        }
+        &__social-link {
+            margin-right: 10px;
+        }
+        &__social-img {
+            width: 43px;
+            height: 42px;
         }
     }
 }
@@ -302,6 +332,18 @@
             &-text {
                 margin-bottom: 9px;
             }
+        }
+    }
+
+    .footer {
+        height: 500px;
+        &__map {
+            height: 100%;
+        }
+        &__info {
+            width: 80%;
+            text-align: center;
+            height: auto;
         }
     }
 }
