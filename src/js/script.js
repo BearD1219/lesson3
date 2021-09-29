@@ -35,3 +35,12 @@ function toggleSlide (item) {
 
 toggleSlide('.catalog__link');
 toggleSlide('.catalog__link-back');
+
+// MODALS
+let buttons = document.querySelectorAll('[data-modal]');
+for(let button of buttons) {
+    button.addEventListener('click', () => {
+        document.querySelector('.overlay').classList.add('overlay_active');
+        document.querySelector(button.getAttribute('data-modal')).style.display = "block";
+    });
+} 

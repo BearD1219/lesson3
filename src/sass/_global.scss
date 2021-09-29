@@ -35,3 +35,17 @@ body {
     font-size: 18px;
     color: #fff;
 }
+
+.overlay {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 100;
+    &_active {
+        display: flex;
+    }
+}

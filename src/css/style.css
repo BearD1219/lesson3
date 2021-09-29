@@ -61,6 +61,22 @@ body {
   color: #fff;
 }
 
+.overlay {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+.overlay_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .button {
   font-weight: 300;
   font-size: 12px;
@@ -708,6 +724,47 @@ body {
   transition: 0.4s -webkit-transform;
   transition: 0.4s transform;
   transition: 0.4s transform, 0.4s -webkit-transform;
+}
+
+.modal {
+  display: none;
+  width: 382px;
+  padding: 35px 25px;
+  margin: auto;
+  position: relative;
+  background-color: #F2F2F2;
+  text-align: center;
+  color: #0D0D0D;
+}
+.modal__close {
+  position: absolute;
+  top: -2px;
+  right: -40px;
+  font-size: 37px;
+  font-weight: 500;
+  line-height: 25px;
+  color: #C70101;
+  cursor: pointer;
+}
+.modal__title {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.modal__subtitle {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 26px;
+}
+.modal__subtitle_mini {
+  line-height: 20px;
+  margin-bottom: 0;
+}
+.modal__form {
+  margin: 0 auto;
+}
+.modal_mini {
+  padding: 34px 60px;
 }
 
 @media (max-width: 991px) {

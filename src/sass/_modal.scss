@@ -1,0 +1,41 @@
+.modal {
+    display: none;
+    width: 382px;
+    padding: 35px 25px;
+    margin: auto;
+    position: relative;
+    background-color: #F2F2F2;
+    text-align: center;
+    color: #0D0D0D;
+    &__close {
+        position: absolute;
+        top: -2px;
+        right: -40px;
+        font-size: 37px;
+        font-weight: 500;
+        line-height: 25px;
+        color: $highlight-color;
+        cursor: pointer;
+    }
+    &__title {
+        font-size: 19px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    &__subtitle {
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 26px;
+        &_mini {
+            line-height: 20px;
+            margin-bottom: 0;
+        }
+    }
+    &__form {
+        margin: 0 auto;
+    }
+    &_mini {
+        padding: 34px 60px;
+
+    }
+}
