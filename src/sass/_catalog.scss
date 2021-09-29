@@ -23,6 +23,7 @@
         margin-right: 10px;
         transform: skewX(-25deg);
         cursor: pointer;
+        transition: .4s all;
         &:last-child {
             margin-right: 0;
         }
@@ -51,6 +52,7 @@
         padding: 20px;
         margin-bottom: 20px;
         overflow: hidden;
+        transition: .2s border;
         hr {
             border-bottom: none;
             border-color: #E8E8E8;
@@ -65,6 +67,7 @@
             margin-right: 0;
             transform: translateX(-100%);
             transition: .5s all;
+            text-align: center;
             &_active {
                 transform: translateX(0%);
                 margin-right: 20px;
@@ -124,14 +127,12 @@
         color: $highlight-color;
         text-transform: uppercase;
         font-weight: 500;
-        display: block;
         text-align: center;
     }
     &__link-back {
         color: $highlight-color;
         text-transform: uppercase;
         font-weight: 500;
-        display: block;
         text-align: center;
     }
     &__sale {

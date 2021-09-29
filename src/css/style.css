@@ -71,6 +71,8 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  -webkit-transition: 0.4s background;
+  transition: 0.4s background;
 }
 .button_big {
   font-size: 16px;
@@ -150,6 +152,8 @@ body {
 .promo__link {
   text-transform: uppercase;
   color: #fff;
+  -webkit-transition: 0.4s font-weight;
+  transition: 0.4s font-weight;
 }
 
 .header {
@@ -438,6 +442,8 @@ body {
   -webkit-transform: skewX(-25deg);
           transform: skewX(-25deg);
   cursor: pointer;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
 }
 .catalog__tab:last-child {
   margin-right: 0;
@@ -472,6 +478,8 @@ body {
   padding: 20px;
   margin-bottom: 20px;
   overflow: hidden;
+  -webkit-transition: 0.2s border;
+  transition: 0.2s border;
 }
 .catalog__item hr {
   border-bottom: none;
@@ -491,6 +499,7 @@ body {
           transform: translateX(-100%);
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
+  text-align: center;
 }
 .catalog__item-content_active {
   -webkit-transform: translateX(0%);
@@ -562,14 +571,12 @@ body {
   color: #C70101;
   text-transform: uppercase;
   font-weight: 500;
-  display: block;
   text-align: center;
 }
 .catalog__link-back {
   color: #C70101;
   text-transform: uppercase;
   font-weight: 500;
-  display: block;
   text-align: center;
 }
 .catalog__sale {
@@ -695,6 +702,12 @@ body {
 }
 .footer__social-link:last-child {
   margin-right: 0;
+}
+.footer__social-img {
+  -webkit-transition: 0.4s -webkit-transform;
+  transition: 0.4s -webkit-transform;
+  transition: 0.4s transform;
+  transition: 0.4s transform, 0.4s -webkit-transform;
 }
 
 @media (max-width: 991px) {
@@ -1033,5 +1046,34 @@ body {
     width: 80%;
     text-align: center;
     height: auto;
+  }
+}
+@media (min-width: 768px) {
+  .button:hover {
+    background-color: #910505;
+  }
+
+  .promo__link:hover {
+    font-weight: 700;
+  }
+
+  .catalog__tab:hover {
+    -webkit-box-shadow: 0 5px 20px #910505;
+            box-shadow: 0 5px 20px #910505;
+  }
+  .catalog__tab_active:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .catalog__item:hover {
+    border: 1px solid black;
+  }
+  .catalog__link:hover, .catalog__link-back:hover {
+    font-weight: 700;
+  }
+
+  .footer__social-link:hover img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }

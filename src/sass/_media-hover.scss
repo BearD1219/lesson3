@@ -1,0 +1,44 @@
+@media (min-width: 768px) {
+    .button {
+        &:hover {
+            background-color: $hover-color;
+        }
+    }
+
+    .promo {
+        &__link {
+            &:hover {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .catalog {
+        &__tab {
+            &:hover {
+                box-shadow: 0 5px 20px $hover-color;
+            }
+            &_active:hover {
+                box-shadow: none;
+            }
+        }
+        &__item {
+            &:hover {
+                border: 1px solid black;
+            }
+        }
+        &__link, &__link-back {
+            &:hover {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .footer {
+        &__social-link {
+            &:hover img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
