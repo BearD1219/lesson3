@@ -175,6 +175,10 @@
             height: 42px;
         }
     }
+
+    .modal {
+        width: 320px;
+    }
 }
 
 @media (max-width: 575px) {
@@ -344,6 +348,14 @@
             width: 80%;
             text-align: center;
             height: auto;
+        }
+    }
+
+    .modal {
+        width: 230px;
+        padding: 17px 10px;
+        &__close {
+            right: -30px;
         }
     }
 }

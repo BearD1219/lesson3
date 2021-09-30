@@ -37,10 +37,66 @@ toggleSlide('.catalog__link');
 toggleSlide('.catalog__link-back');
 
 // MODALS
-let buttons = document.querySelectorAll('[data-modal]');
-for(let button of buttons) {
-    button.addEventListener('click', () => {
-        document.querySelector('.overlay').classList.add('overlay_active');
-        document.querySelector(button.getAttribute('data-modal')).style.display = "block";
+// const buttons = document.querySelectorAll('[data-modal]');
+// const overlay = document.querySelector('.overlay');
+// const closeButtons = document.querySelectorAll('.modal__close');
+// let currentModal;
+
+// for (let button of buttons) {
+//     button.addEventListener('click', () => {
+//         overlay.classList.add('overlay_active');
+//         currentModal = document.querySelector(button.getAttribute('data-modal'));
+//         currentModal.style.display = "block";
+
+//         for (let closeButton of closeButtons) {
+//             document.addEventListener('click', (e) => {
+//                 if (e.target == overlay || closeButton) {
+//                     currentModal.style.display = "none";
+//                     overlay.classList.remove('overlay_active');
+//                 } else {
+//                     console.log('ЖОПА');
+//                 }
+//             });
+//         }
+//     });
+// } 
+$('[data-modal]').on('click', (e) => {
+    let modalCurr = $(e.target).data('modal');
+    let parent = $(e.target).parent().siblings()[0];
+    let itemName = $(parent).find('.catalog__name').text();
+    $(`${modalCurr}, .overlay`).fadeIn('slow');
+
+    if(modalCurr == "#order") {
+        $(`${modalCurr} > .modal__subtitle`).text(itemName);
+    }
+});
+
+$('.modal__close').on('click', () => {
+    $('.overlay, #consultation, #order, #info').fadeOut('slow');
+});
+
+// VALIDATION 
+function validateForm(form) {
+    $(form).validate({
+        rules: {
+            name: "required",
+            phone: "required",
+            email: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            name: "Обязательное поле для заполнения",
+            phone: "Обязательное поле для заполнения",
+            email: {
+                required: "Обязательное поле для заполнения",
+                email: "Некорректный почтовый адрес"
+            }
+        }
     });
-} 
+}
+
+validateForm('.consultation form');
+validateForm('#consultation form');
+validateForm('#order form');

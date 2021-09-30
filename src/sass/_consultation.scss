@@ -17,4 +17,15 @@
         color:#fff;
         margin-bottom: 36px;
     }
+    // VALIDATION
+    .error {
+        border: 1px solid $highlight-color;
+    }
+    label.error {
+        border: none;
+        color: #fff;
+        margin-top: -5px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
 }

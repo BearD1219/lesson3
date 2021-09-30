@@ -2,11 +2,14 @@
     display: none;
     width: 382px;
     padding: 35px 25px;
-    margin: auto;
     position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #F2F2F2;
     text-align: center;
     color: #0D0D0D;
+    z-index: 101;
     &__close {
         position: absolute;
         top: -2px;
@@ -16,6 +19,7 @@
         line-height: 25px;
         color: $highlight-color;
         cursor: pointer;
+        transition: .3s transform;
     }
     &__title {
         font-size: 19px;
@@ -37,5 +41,16 @@
     &_mini {
         padding: 34px 60px;
 
+    }
+    // VALIDATION
+    .error {
+        border: 1px solid $highlight-color;
+    }
+    label.error {
+        border: none;
+        color: $highlight-color;
+        margin-top: -5px;
+        margin-bottom: 5px;
+        text-align: center;
     }
 }

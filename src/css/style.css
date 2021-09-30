@@ -71,11 +71,6 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 100;
 }
-.overlay_active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
 
 .button {
   font-weight: 300;
@@ -377,6 +372,16 @@ body {
   color: #fff;
   margin-bottom: 36px;
 }
+.consultation .error {
+  border: 1px solid #C70101;
+}
+.consultation label.error {
+  border: none;
+  color: #fff;
+  margin-top: -5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
 
 .feed-form {
   display: -webkit-box;
@@ -386,7 +391,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 300px;
+  width: 300px;
 }
 .feed-form__input {
   height: 54px;
@@ -405,6 +410,7 @@ body {
 
 .swiper {
   padding-bottom: 5px;
+  z-index: 1;
 }
 .swiper-slide img {
   display: block;
@@ -730,11 +736,15 @@ body {
   display: none;
   width: 382px;
   padding: 35px 25px;
-  margin: auto;
   position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   background-color: #F2F2F2;
   text-align: center;
   color: #0D0D0D;
+  z-index: 101;
 }
 .modal__close {
   position: absolute;
@@ -745,6 +755,10 @@ body {
   line-height: 25px;
   color: #C70101;
   cursor: pointer;
+  -webkit-transition: 0.3s -webkit-transform;
+  transition: 0.3s -webkit-transform;
+  transition: 0.3s transform;
+  transition: 0.3s transform, 0.3s -webkit-transform;
 }
 .modal__title {
   font-size: 19px;
@@ -765,6 +779,16 @@ body {
 }
 .modal_mini {
   padding: 34px 60px;
+}
+.modal .error {
+  border: 1px solid #C70101;
+}
+.modal label.error {
+  border: none;
+  color: #C70101;
+  margin-top: -5px;
+  margin-bottom: 5px;
+  text-align: center;
 }
 
 @media (max-width: 991px) {
@@ -925,6 +949,10 @@ body {
   .footer__social-img {
     width: 43px;
     height: 42px;
+  }
+
+  .modal {
+    width: 320px;
   }
 }
 @media (max-width: 575px) {
@@ -1104,6 +1132,14 @@ body {
     text-align: center;
     height: auto;
   }
+
+  .modal {
+    width: 230px;
+    padding: 17px 10px;
+  }
+  .modal__close {
+    right: -30px;
+  }
 }
 @media (min-width: 768px) {
   .button:hover {
@@ -1132,5 +1168,10 @@ body {
   .footer__social-link:hover img {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
+  }
+
+  .modal__close:hover {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
   }
 }
