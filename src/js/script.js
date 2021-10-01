@@ -103,3 +103,19 @@ validateForm('#order form');
 
 // TELEPHONE MASK
 $("[name = phone]").mask("+7 (999) 999-99-99");
+
+// MAILER
+$('form').submit((e) => {
+    e.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: "mailer/smart.php",
+        data: $(this).serialize()
+    }).done(() => {
+        $(this).find('input').val('');
+        $('#consultation, #order').fadeOut();
+        $('.overlay, #info').fadeIn('slow');
+        $('form').trigger('reset');
+    });
+    return false;
+});
