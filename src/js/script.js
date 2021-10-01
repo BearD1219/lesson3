@@ -100,3 +100,6 @@ function validateForm(form) {
 validateForm('.consultation form');
 validateForm('#consultation form');
 validateForm('#order form');
+
+// TELEPHONE MASK
+$("[name = phone]").mask("+7 (999) 999-99-99");

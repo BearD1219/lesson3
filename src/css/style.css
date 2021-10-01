@@ -242,6 +242,7 @@ body {
   height: 25px;
   margin: auto;
   fill: #fff;
+  pointer-events: none;
 }
 
 @-webkit-keyframes mobile-pulse {
