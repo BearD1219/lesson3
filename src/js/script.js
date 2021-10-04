@@ -105,13 +105,13 @@ validateForm('#order form');
 $("[name = phone]").mask("+7 (999) 999-99-99");
 
 // MAILER
-$('form').submit((e) => {
+$('form').submit(function(e) {
     e.preventDefault();
     $.ajax({
         type: "POST",
         url: "mailer/smart.php",
         data: $(this).serialize()
-    }).done(() => {
+    }).done(function() {
         $(this).find('input').val('');
         $('#consultation, #order').fadeOut();
         $('.overlay, #info').fadeIn('slow');
