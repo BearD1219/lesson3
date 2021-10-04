@@ -1,0 +1,15 @@
+.page-up {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid $highlight-color;
+    border-radius: 50%;
+    padding: 5px;
+    &__img {
+        width: 100%;
+        transform: rotate(-90deg);
+    }
+}

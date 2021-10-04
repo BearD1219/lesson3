@@ -55,6 +55,11 @@
             height: 245px;
         }
     }
+
+    .page-up {
+        bottom: 20px;
+        right: 20px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -360,5 +365,13 @@
         &__close {
             right: -30px;
         }
+    }
+
+    .page-up {
+        width: 35px;
+        height: 35px;
+        padding: 2px;
+        right: 5px;
+        bottom: 10px;
     }
 }
