@@ -122,7 +122,7 @@ $('form').submit(function(e) {
 
 // SMOOTH SCROLL
 $(window).scroll(function() {
-    if($(this).scrollTop() > 1600) {
+    if($(this).scrollTop() > 1000) {
         $(".page-up").fadeIn();
     } else {
         $(".page-up").fadeOut();
@@ -134,3 +134,6 @@ $("a[href^='#']").click(function () {
     $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
     return false;
 });
+
+// Animate
+new WOW().init();
