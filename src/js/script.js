@@ -137,3 +137,9 @@ $("a[href^='#']").click(function () {
 
 // Animate
 new WOW().init();
+const mobile = document.querySelector('.mobile');
+if (window.getComputedStyle(mobile).display != 'none') {
+    document.querySelectorAll('.wow').forEach(item => {
+        item.classList.remove('wow', 'animate__animated');
+    });
+}
